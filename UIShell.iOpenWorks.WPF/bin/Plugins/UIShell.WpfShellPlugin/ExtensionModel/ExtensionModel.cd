@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.XmlObject">
+    <Position X="6.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIIAAAAIAACAAAAAAAAA=</HashCode>
+      <FileName>ExtensionModel\XmlObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.TabLinkData">
+    <Position X="7" Y="6.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAICCQAAAAAAAA=</HashCode>
+      <FileName>ExtensionModel\TabLinkData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.LinkGroupData">
+    <Position X="4" Y="6.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAgAIAAQAAAAAAAAAAAAAAAAAAQAACCQAAAAAAAE=</HashCode>
+      <FileName>ExtensionModel\LinkGroupData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.LinkData">
+    <Position X="1.25" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>ExtensionModel\LinkData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.LinkBase">
+    <Position X="4" Y="3" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAEACAAAAAAAAAAAAAAAAAAAAgAAAAAGAAABAAAAA=</HashCode>
+      <FileName>ExtensionModel\LinkBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIShell.WpfShellPlugin.ExtensionModel.ShellExtensionPointHandler">
+    <Position X="1.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAIAAAAAAAAAABAAAAAEIAAgAAAAAg=</HashCode>
+      <FileName>ExtensionModel\ShellExtensionPointHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

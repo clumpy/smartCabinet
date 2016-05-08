@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="非常漂亮WPF界面框架插件" SymbolicName="UIShell.WpfShellPlugin" Version="1.0.0.7" InitializedState="Active" StartLevel="2">
+  <Activator Type="UIShell.WpfShellPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\UIShell.WpfShellPlugin.dll" Share="true" />
+    <Assembly Path="bin\FirstFloor.ModernUI.dll" Share="true" />
+    <Assembly Path="bin\Microsoft.Windows.Shell.dll" Share="true" />
+  </Runtime>
+  <Extension Point="PageFlowService.PageNode">
+    <PageNode Name="MainPage" Priority="50" Value="UIShell.WpfShellPlugin.MainWindow" />
+  </Extension>
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="true" />
+  </Extension>
+  <Extension Point="UIShell.WpfShellPlugin.LinkGroups">
+    <LinkGroup DisplayName="物料提取" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
+    </LinkGroup>
+    <LinkGroup DisplayName="物料存放" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
+    </LinkGroup>
+    <LinkGroup DisplayName="物料管理" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
+    </LinkGroup>    
+    <LinkGroup DisplayName="设置" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Settings" GroupName="Settings" IsTitleLink="True">
+      <Link DisplayName="外观设置" Source="UIShell.WpfShellPlugin.Pages.Settings" />
+    </LinkGroup>
+  </Extension>
+</Bundle>

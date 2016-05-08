@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="UIShell.WpfShellPlugin.Pages.Introduction2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid >
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="Auto" />
+
+            <RowDefinition Height="22" />
+
+        </Grid.RowDefinitions>
+        <ScrollViewer>
+            <StackPanel >
+                <TextBlock Margin="0,0,0,10"/>
+
+                <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
+                    <TextBlock Text="请输入物料编码"  Margin="0,0,0,8" FontSize="15"/>
+                    <TextBox Name="InputBomNum" MinWidth="280" Text="" />
+                    
+                </StackPanel>
+                <TextBlock Margin="0,0,0,10"/>
+                <WrapPanel Grid.Row="1" Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
+                        <TextBlock Name="textBlock_ContactID" Text="箱号:" />
+                        <TextBox Name="cabinetID" MinWidth="50" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
+                        <TextBlock Name="textBlock_FirstName" Text="物料名:" />
+                        <TextBox Name="BomName" MinWidth="150" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
+                        <TextBlock Name="textBlock_LastName" Text="物料号:" />
+                        <TextBox Name="BomNum" MinWidth="180" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
+                        <TextBlock Name="textBlock_EmailAddress" Text="数量:" />
+                        <TextBox Name="Num" MinWidth="70" />
+                    </StackPanel>
+                </WrapPanel>
+                <Button Grid.Row="2" HorizontalAlignment="Right"  Name="button1">确认</Button>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="WPF  插件中心插件" SymbolicName="UIShell.WpfAppCenterPlugin" Version="1.0.0.2" InitializedState="Active">
+  <Activator Type="UIShell.WpfAppCenterPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\UIShell.WpfAppCenterPlugin.dll" Share="false" />
+    <Assembly Path="bin\Microsoft.Windows.Shell.dll" Share="false" />
+    <Assembly Path="bin\FirstFloor.ModernUI.dll" Share="true" />
+    <Dependency BundleSymbolicName="UIShell.BundleManagementService" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="PageFlowService.PageNode">
+    <PageNode Name="AppCenterPage" Priority="50" Value="UIShell.WpfAppCenterPlugin.AppCenterWindow" />
+  </Extension>
+
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="false" />
+  </Extension>
+</Bundle>

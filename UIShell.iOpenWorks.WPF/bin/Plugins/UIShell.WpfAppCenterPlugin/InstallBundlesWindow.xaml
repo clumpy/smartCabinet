@@ -1,0 +1,16 @@
+﻿<mui:ModernWindow x:Class="UIShell.WpfAppCenterPlugin.InstallBundlesWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             WindowStartupLocation="CenterScreen" Closing="ModernWindow_Closing"
+             Loaded="ModernWindow_Loaded" Width="600" Height="480" ResizeMode="NoResize">
+    <Grid Style="{StaticResource ContentRoot}">
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Top" Name="TitleTextBlock"/>
+            <ProgressBar DockPanel.Dock="Top" Name="InstallProgressBar" Minimum="0" Maximum="100" Value="0" Height="28" IsIndeterminate="False" Margin="0,0,0,16" />
+            <ScrollViewer Name="ScrollViewer">
+                <TextBlock DockPanel.Dock="Bottom" Name="MessageTextBlock" TextWrapping="Wrap"  />
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</mui:ModernWindow>

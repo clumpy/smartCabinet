@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cabinetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="CabID" />
+    </Key>
+    <Property Name="CabID" Type="Int32" Nullable="false" />
+    <Property Name="BomName" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="BomNum" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
+    <Property Name="Num" Type="Int32" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="cabinetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Table" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>

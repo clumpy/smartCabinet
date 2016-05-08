@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<UpdateRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UpdateRecords>
+    <UpdateRecordItem>
+      <CoreFileId>1</CoreFileId>
+      <CoreFileType>OSGi</CoreFileType>
+      <UpdateDate>2015-01-23T11:06:30.01225</UpdateDate>
+      <Version>1.2.2.5</Version>
+    </UpdateRecordItem>
+    <UpdateRecordItem>
+      <CoreFileId>7</CoreFileId>
+      <CoreFileType>PageFlowService</CoreFileType>
+      <UpdateDate>2014-08-08T09:41:52.0017515</UpdateDate>
+      <Version>1.0.0.0</Version>
+    </UpdateRecordItem>
+    <UpdateRecordItem>
+      <CoreFileId>9</CoreFileId>
+      <CoreFileType>BundleRepositoryOpenAPI</CoreFileType>
+      <UpdateDate>2013-04-03T14:06:45.199875</UpdateDate>
+      <Version>1.0.0.0</Version>
+    </UpdateRecordItem>
+  </UpdateRecords>
+  <LastCheckDateTime>2016-05-02T21:02:19.5011472+08:00</LastCheckDateTime>
+</UpdateRecord>

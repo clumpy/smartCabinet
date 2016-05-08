@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cabinetModelStoreContainer" CdmEntityContainer="cabinetEntities">
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="cabinetModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="CabID" ColumnName="CabID" />
+          <ScalarProperty Name="BomName" ColumnName="BomName" />
+          <ScalarProperty Name="BomNum" ColumnName="BomNum" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
