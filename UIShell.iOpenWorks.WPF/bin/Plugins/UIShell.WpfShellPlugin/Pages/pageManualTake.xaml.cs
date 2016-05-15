@@ -21,7 +21,7 @@ using UIShell.WpfShellPlugin;
 namespace UIShell.WpfShellPlugin.Pages
 {
     /// <summary>
-    /// Introduction3.xaml 的交互逻辑
+    /// pageManualTake.xaml 的交互逻辑
     /// </summary>
     /// 
 
@@ -59,17 +59,14 @@ namespace UIShell.WpfShellPlugin.Pages
 
 
     }
-    public partial class Introduction3 : UserControl
+    public partial class pageManualTake : UserControl
     {
         bom mbom;
-        cabinetEntities db = new cabinetEntities();
-        
-
-        public Introduction3()
+        dbList takeList = new dbList();
+        public pageManualTake()
         {
             InitializeComponent();
             GetData();
-            List<DAL.Table> list = db.Table.ToList<DAL.Table>();
             mbom = new bom { Num = 0, TakeNum = 0 };
             this.DataContext = mbom;
           
@@ -82,8 +79,8 @@ namespace UIShell.WpfShellPlugin.Pages
         
         protected void GetData()
         {
-            List<DAL.Table> list = db.Table.ToList<DAL.Table>();                   
-            listView1.ItemsSource = list;
+            takeList.updateList();
+            listView1.ItemsSource = takeList.list;
 
         }
 
@@ -94,14 +91,14 @@ namespace UIShell.WpfShellPlugin.Pages
             
             int id = int.Parse(textBox_CabID.Text);
 
-            var bom = db.Table.Where(c => c.CabID == id).OrderBy(c => c.CabID).FirstOrDefault();
+            var bom = takeList.db.Table.Where(c => c.CabID == id).OrderBy(c => c.CabID).FirstOrDefault();
             if (bom.Num >= mbom.TakeNum && mbom.TakeNum > 0)
             {
                 bom.Num = bom.Num - mbom.TakeNum;
 
                 bom.DateUpdated = DateTime.Now;
 
-                db.SaveChanges();
+                takeList.db.SaveChanges();
 
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs("TakeBom"));

@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using UIShell.WpfShellPlugin.ExtensionModel;
 using FirstFloor.ModernUI.Presentation;
+using System.Data.Entity;
+using UIShell.WpfShellPlugin.DAL;
+using UIShell.WpfShellPlugin.Pages;
 
 namespace UIShell.WpfShellPlugin
 {
@@ -24,7 +27,7 @@ namespace UIShell.WpfShellPlugin
     {
         public static ShellExtensionPointHandler ShellExtensionPointHandler { get; set; }
         private List<Tuple<LinkGroupData, LinkGroup>> LinkGroupTuples { get; set; }
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +38,16 @@ namespace UIShell.WpfShellPlugin
             TcpClient.CabinetTCPServer client = new TcpClient.CabinetTCPServer();
             client.InitCBDebugServer("192.168.16.254", 8080);
 
-        }
+            dbList newList = new dbList();
+
+            childWindow = new ChildWindow();
+            childWindow.Parent = this;
+            ChildWindowUC child = new ChildWindowUC();
+            child.Close += new EventHandler(child_Close);
+            childWindow.Content = child;
+
+            pageScanStore.store += store_child;
+         }
 
         void InitializeLinkGroupsForExtensions()
         {
@@ -72,7 +84,7 @@ namespace UIShell.WpfShellPlugin
                         CreateLinkGroupForData(item);
                     }
                 }
-                else if(e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+                else if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
                 {
                     // 删除了LinkGroupData
                     foreach (LinkGroupData item in e.OldItems)
@@ -81,7 +93,7 @@ namespace UIShell.WpfShellPlugin
                     }
                 }
             };
-            
+
             Dispatcher.Invoke(action);
         }
 
@@ -92,7 +104,7 @@ namespace UIShell.WpfShellPlugin
             {
                 if (linkData is LinkData)
                 {
-                    
+
                     linkGroup.Links.Add(new Link { DisplayName = linkData.DisplayName, Source = new Uri(linkData.FormatSource((linkData as LinkData).Source), UriKind.RelativeOrAbsolute) });
                 }
                 else if (linkData is TabLinkData)
@@ -116,6 +128,49 @@ namespace UIShell.WpfShellPlugin
                 MenuLinkGroups.Remove(tuple.Item2);
                 LinkGroupTuples.Remove(tuple);
             }
+        }
+
+        private ChildWindow childWindow;
+        private ChildWindow progressWindow;
+
+
+        public ChildWindow ChildWindow
+        {
+            get { return this.childWindow; }
+            set { this.childWindow = value; }
+        }
+
+        public ChildWindow ProgressWindow
+        {
+            get { return this.progressWindow; }
+            set { this.progressWindow = value; }
+        }
+
+        public void child_Close(object sender, EventArgs e)
+        {
+            childWindow.Close();
+        }    
+         
+        private void store_child(object sender, EventArgs e)
+        {
+            Window1 child = new Window1();
+            child.Show();
+            //ChildWindow.Show();
+        }  
+    }
+
+    public class dbList
+    {
+        public cabinetEntities db = new cabinetEntities();
+        public List<DAL.Table> list;
+
+        public dbList()
+        {
+            list = db.Table.ToList<DAL.Table>();
+        }
+        public void updateList()
+        {
+            list = db.Table.ToList<DAL.Table>();
         }
     }
 }

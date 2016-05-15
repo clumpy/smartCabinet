@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="UIShell.WpfShellPlugin.Pages.Introduction3"
+﻿<UserControl x:Class="UIShell.WpfShellPlugin.Pages.pageScanStore"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,19 +18,19 @@
         </Grid.RowDefinitions>
         <ScrollViewer>
             <StackPanel >
-                 <TextBlock Text="请点击箱号并确认数量"  Margin="0,0,0,8" FontSize="15"/>  
+                <TextBlock Text="请点击箱号并确认数量"  Margin="0,0,0,8" FontSize="15"/>
 
                 <ListView Name="listView1" MinWidth="280" >
-                            <ListView.View>
-                                <GridView x:Name="gridView1">
-                                    <GridViewColumn Header="箱号" DisplayMemberBinding="{Binding Path=CabID}"></GridViewColumn>
-                                    <GridViewColumn Header="物料名" DisplayMemberBinding="{Binding Path=BomName}"></GridViewColumn>
-                                    <GridViewColumn Header="物料号" DisplayMemberBinding="{Binding Path=BomNum}"></GridViewColumn>
-                                    <GridViewColumn Header="数量" DisplayMemberBinding="{Binding Path=Num}"></GridViewColumn>
-                                    <GridViewColumn Header="建立日期" DisplayMemberBinding="{Binding Path=DateCreated}"></GridViewColumn>
-                                    <GridViewColumn Header="更新日期" DisplayMemberBinding="{Binding Path=DateUpdated}"></GridViewColumn>
-                                </GridView>
-                            </ListView.View>
+                    <ListView.View>
+                        <GridView x:Name="gridView1">
+                            <GridViewColumn Header="箱号" DisplayMemberBinding="{Binding Path=CabID}"></GridViewColumn>
+                            <GridViewColumn Header="物料名" DisplayMemberBinding="{Binding Path=BomName}"></GridViewColumn>
+                            <GridViewColumn Header="物料号" DisplayMemberBinding="{Binding Path=BomNum}"></GridViewColumn>
+                            <GridViewColumn Header="数量" DisplayMemberBinding="{Binding Path=Num}"></GridViewColumn>
+                            <GridViewColumn Header="建立日期" DisplayMemberBinding="{Binding Path=DateCreated}"></GridViewColumn>
+                            <GridViewColumn Header="更新日期" DisplayMemberBinding="{Binding Path=DateUpdated}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
                 </ListView>
 
                 <WrapPanel Grid.Row="2" Orientation="Horizontal" DataContext="{Binding ElementName=listView1,Path=SelectedItem ,Mode=TwoWay}" >
@@ -68,15 +68,10 @@
                     </StackPanel>
 
 
-                </WrapPanel> 
+                </WrapPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="5,2,5,2">
-
-                    <TextBlock Name="textBlock_TakeNum" Text="请输入提取数量:" />
-
-                    <TextBox Name="textBox_TakeNum" MinWidth="50"  Text="{Binding Path=TakeNum}"/>
-                    <Button Grid.Row="1" HorizontalAlignment="Left" Click="btnUpdate_Click" Name="button2" Height="30" VerticalAlignment="Bottom">确认</Button>
-
+                    <Button Grid.Row="1" HorizontalAlignment="Left" Click="button1_Click" Name="button3" Height="30" VerticalAlignment="Bottom">物料存入</Button>
                 </StackPanel>
 
 
@@ -84,3 +79,4 @@
         </ScrollViewer>
     </Grid>
 </UserControl>
+

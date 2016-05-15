@@ -13,20 +13,20 @@
     <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="true" />
   </Extension>
   <Extension Point="UIShell.WpfShellPlugin.LinkGroups">
-    <LinkGroup DisplayName="物料提取" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
+    <LinkGroup DisplayName="物料提取" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanTake">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanTake" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
     </LinkGroup>
-    <LinkGroup DisplayName="物料存放" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
+    <LinkGroup DisplayName="物料存放" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanStore">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanStore" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
     </LinkGroup>
-    <LinkGroup DisplayName="物料管理" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Introduction">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.Introduction" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.Introduction3" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.Introduction2" />
+    <LinkGroup DisplayName="物料管理" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanTake">
+      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanTake" />
+      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
+      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
     </LinkGroup>    
     <LinkGroup DisplayName="设置" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Settings" GroupName="Settings" IsTitleLink="True">
       <Link DisplayName="外观设置" Source="UIShell.WpfShellPlugin.Pages.Settings" />

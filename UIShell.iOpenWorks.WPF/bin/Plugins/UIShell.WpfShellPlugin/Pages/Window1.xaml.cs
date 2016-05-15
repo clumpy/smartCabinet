@@ -9,17 +9,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace UIShell.WpfShellPlugin.Pages
 {
     /// <summary>
-    /// Introduction.xaml 的交互逻辑
+    /// Window1.xaml 的交互逻辑
     /// </summary>
-    public partial class Introduction : UserControl
+    public partial class Window1 : Window
     {
-        public Introduction()
+        public Window1()
         {
             InitializeComponent();
         }

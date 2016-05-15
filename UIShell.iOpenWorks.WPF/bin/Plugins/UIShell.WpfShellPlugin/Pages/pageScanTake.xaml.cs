@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace UIShell.WpfShellPlugin.Pages
 {
     /// <summary>
-    /// Introduction4.xaml 的交互逻辑
+    /// Introduction.xaml 的交互逻辑
     /// </summary>
-    public partial class Introduction4 : UserControl
+    public partial class pageScanTake : UserControl
     {
-        public Introduction4()
+        public pageScanTake()
         {
             InitializeComponent();
         }

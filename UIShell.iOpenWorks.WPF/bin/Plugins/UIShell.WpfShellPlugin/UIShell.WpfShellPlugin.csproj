@@ -131,23 +131,30 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ChildWindow.cs" />
+    <Compile Include="Pages\ChildWindowUC.xaml.cs">
+      <DependentUpon>ChildWindowUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ContentPlaceHolder.xaml.cs">
       <DependentUpon>ContentPlaceHolder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Introduction.xaml.cs">
-      <DependentUpon>Introduction.xaml</DependentUpon>
+    <Compile Include="Pages\pageScanStore.xaml.cs">
+      <DependentUpon>pageScanStore.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Introduction2.xaml.cs">
-      <DependentUpon>Introduction2.xaml</DependentUpon>
+    <Compile Include="Pages\pageScanTake.xaml.cs">
+      <DependentUpon>pageScanTake.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Introduction3.xaml.cs">
-      <DependentUpon>Introduction3.xaml</DependentUpon>
+    <Compile Include="Pages\pageCodeTake.xaml.cs">
+      <DependentUpon>pageCodeTake.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Introduction4.xaml.cs">
-      <DependentUpon>Introduction4.xaml</DependentUpon>
+    <Compile Include="Pages\pageManualTake.xaml.cs">
+      <DependentUpon>pageManualTake.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\WindowPrismDemo1.xaml.cs">
       <DependentUpon>WindowPrismDemo1.xaml</DependentUpon>
@@ -166,10 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\编码.png" />
-    <Content Include="bin\FirstFloor.ModernUI.dll" />
-    <Resource Include="bin\FirstFloor.ModernUI.xml" />
     <Content Include="bin\Microsoft.Windows.Shell.dll" />
-    <Content Include="bin\UIShell.WpfShellPlugin.dll" />
     <Content Include="cabinet.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -275,29 +279,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\ChildWindowUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ContentPlaceHolder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Introduction.xaml">
+    <Page Include="Pages\pageScanStore.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Introduction2.xaml">
+    <Page Include="Pages\pageScanTake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Introduction3.xaml">
+    <Page Include="Pages\pageCodeTake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Introduction4.xaml">
+    <Page Include="Pages\pageManualTake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\WindowPrismDemo1.xaml">
       <SubType>Designer</SubType>
