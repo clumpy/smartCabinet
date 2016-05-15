@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\Users\Administrator\Source\Repos\smartCabinet\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.WpfAppCenterPlugin\obj\Debug\
+C:\Users\xiangyu\Source\Repos\NewRepo\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.WpfAppCenterPlugin\obj\Debug\
 UIShell.WpfAppCenterPlugin
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 42078516067
 1-325948063
-10225311075
-271748540163
+10-1883222198
+26-1318220222
 AppCenterUserControl.xaml;AppCenterWindow.xaml;BundleManagementUserControl.xaml;InstallBundlesWindow.xaml;
 
 True

@@ -98,16 +98,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cabinetDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cabinetDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="cabinetDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cabinetDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -125,28 +115,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="cabinetDataSet.xsc">
-      <DependentUpon>cabinetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cabinetDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cabinetDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cabinetDataSet.xss">
-      <DependentUpon>cabinetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="cabinetDataSet1.xsc">
-      <DependentUpon>cabinetDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="cabinetDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>cabinetDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="cabinetDataSet1.xss">
-      <DependentUpon>cabinetDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
