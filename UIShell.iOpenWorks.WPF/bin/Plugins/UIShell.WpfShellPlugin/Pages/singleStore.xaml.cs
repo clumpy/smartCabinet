@@ -15,17 +15,17 @@ using System.Windows.Shapes;
 using UIShell.WpfShellPlugin.DAL;
 using System.ComponentModel;
 using UIShell.WpfShellPlugin;
+using System.Windows.Media.Animation;
 
 
 
 namespace UIShell.WpfShellPlugin.Pages
 {
     /// <summary>
-    /// pageManualTake.xaml 的交互逻辑
+    /// singleStore.xaml 的交互逻辑
     /// </summary>
-    /// 
-
-    public class bom : INotifyPropertyChanged
+    public delegate void storeEventHandler(object sender, EventArgs e);
+    public class bom1 : INotifyPropertyChanged
     {
         private int num;
         private int takenum;
@@ -59,24 +59,24 @@ namespace UIShell.WpfShellPlugin.Pages
 
 
     }
-    public partial class pageManualTake : UserControl
+    public partial class singleStore : UserControl 
     {
-        bom mbom;
+        bom1 mbom1;
         dbList takeList = new dbList();
-        public pageManualTake()
+        public singleStore()
         {
             InitializeComponent();
             GetData();
-            mbom = new bom { Num = 0, TakeNum = 0 };
-            this.DataContext = mbom;
-          
-        }
+            mbom1 = new bom1 { Num = 0, TakeNum = 0 };
+            this.DataContext = mbom1;
+
+       }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
             GetData();
         }
-        
+
         protected void GetData()
         {
             takeList.updateList();
@@ -88,15 +88,22 @@ namespace UIShell.WpfShellPlugin.Pages
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            
+
             int id = int.Parse(textBox_CabID.Text);
 
-            var bom = takeList.db.Table.Where(c => c.CabID == id).OrderBy(c => c.CabID).FirstOrDefault();
-            if (bom.Num >= mbom.TakeNum && mbom.TakeNum > 0)
+            var bom1 = takeList.db.Table.Where(c => c.CabID == id).OrderBy(c => c.CabID).FirstOrDefault();
+            if (true)
+            if (bom1.Num >= mbom1.TakeNum && mbom1.TakeNum > 0)
             {
-                bom.Num = bom.Num - mbom.TakeNum;
+                bom1.Num = bom1.Num + mbom1.TakeNum;
 
-                bom.DateUpdated = DateTime.Now;
+
+                if (bom1.Num == null)
+                    bom1.Num = mbom1.TakeNum;
+                else
+                    bom1.Num = bom1.Num + mbom1.TakeNum;
+                bom1.DateCreated = DateTime.Now;
+                bom1.DateUpdated = DateTime.Now;
 
                 takeList.db.SaveChanges();
 
@@ -104,7 +111,7 @@ namespace UIShell.WpfShellPlugin.Pages
                     PropertyChanged(this, new PropertyChangedEventArgs("TakeBom"));
                 GetData();
 
-                mbom.TakeNum = 0;
+                mbom1.TakeNum = 0;
                 TcpClient.CabinetTCPServer.CabinetOpen(id);
             }
 
@@ -130,13 +137,25 @@ namespace UIShell.WpfShellPlugin.Pages
 
         }
 
-        
+        public FrameworkElement Parent
+        {
+            get;
+            set;
+        }
 
-        
+       
+       // 将创建的委托和特定事件关联,在这里特定的事件为
+       public static event EventHandler store;
 
+       private void button1_Click(object sender, RoutedEventArgs e)
+       {
+           EventArgs storeEvent = new EventArgs();
+           if (store != null)
+           {
+               store(sender, e);//执行委托实例  
+           }
+
+       }      
     }
 
-
-
 }
-

@@ -20,11 +20,11 @@ using UIShell.WpfShellPlugin.DAL;
 namespace UIShell.WpfShellPlugin.Pages
 {
     /// <summary>
-    /// pageCodeTake.xaml 的交互逻辑
+    /// packageStore.xaml 的交互逻辑
     /// </summary>
-    public partial class pageCodeTake : UserControl
+    public partial class packageStore : UserControl
     {
-        public pageCodeTake()
+        public packageStore()
         {
             InitializeComponent();
 

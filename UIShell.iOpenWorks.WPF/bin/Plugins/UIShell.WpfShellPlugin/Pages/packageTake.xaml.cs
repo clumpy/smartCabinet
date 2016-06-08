@@ -17,9 +17,9 @@ namespace UIShell.WpfShellPlugin.Pages
     /// <summary>
     /// Introduction.xaml 的交互逻辑
     /// </summary>
-    public partial class pageScanTake : UserControl
+    public partial class packageTake : UserControl
     {
-        public pageScanTake()
+        public packageTake()
         {
             InitializeComponent();
         }

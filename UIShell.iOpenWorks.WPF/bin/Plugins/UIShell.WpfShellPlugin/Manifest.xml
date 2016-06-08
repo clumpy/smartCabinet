@@ -13,20 +13,16 @@
     <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="true" />
   </Extension>
   <Extension Point="UIShell.WpfShellPlugin.LinkGroups">
-    <LinkGroup DisplayName="物料提取" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanTake">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanTake" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
+    <LinkGroup DisplayName="物料下架" DefaultContentSource="UIShell.WpfShellPlugin.Pages.singleTake">
+      <Link DisplayName="单件操作" Source="UIShell.WpfShellPlugin.Pages.singleTake" />
+      <Link DisplayName="工单操作" Source="UIShell.WpfShellPlugin.Pages.packageTake" />
     </LinkGroup>
-    <LinkGroup DisplayName="物料存放" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanStore">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanStore" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
+    <LinkGroup DisplayName="物料上架" DefaultContentSource="UIShell.WpfShellPlugin.Pages.singleStore">
+      <Link DisplayName="单件操作" Source="UIShell.WpfShellPlugin.Pages.singleStore" />
+      <Link DisplayName="工单操作" Source="UIShell.WpfShellPlugin.Pages.packageStore" />
     </LinkGroup>
-    <LinkGroup DisplayName="物料管理" DefaultContentSource="UIShell.WpfShellPlugin.Pages.pageScanTake">
-      <Link DisplayName="扫码" Source="UIShell.WpfShellPlugin.Pages.pageScanTake" />
-      <Link DisplayName="物料号" Source="UIShell.WpfShellPlugin.Pages.pageManualTake" />
-      <Link DisplayName="手动" Source="UIShell.WpfShellPlugin.Pages.pageCodeTake" />
+    <LinkGroup DisplayName="物料管理" DefaultContentSource="UIShell.WpfShellPlugin.Pages.packageStore">
+      <Link DisplayName="工单操作" Source="UIShell.WpfShellPlugin.Pages.packageStore" />
     </LinkGroup>    
     <LinkGroup DisplayName="设置" DefaultContentSource="UIShell.WpfShellPlugin.Pages.Settings" GroupName="Settings" IsTitleLink="True">
       <Link DisplayName="外观设置" Source="UIShell.WpfShellPlugin.Pages.Settings" />

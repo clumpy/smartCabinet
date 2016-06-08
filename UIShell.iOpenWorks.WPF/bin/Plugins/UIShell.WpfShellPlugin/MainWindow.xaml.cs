@@ -46,7 +46,7 @@ namespace UIShell.WpfShellPlugin
             child.Close += new EventHandler(child_Close);
             childWindow.Content = child;
 
-            pageScanStore.store += store_child;
+            singleStore.store += store_child;
          }
 
         void InitializeLinkGroupsForExtensions()

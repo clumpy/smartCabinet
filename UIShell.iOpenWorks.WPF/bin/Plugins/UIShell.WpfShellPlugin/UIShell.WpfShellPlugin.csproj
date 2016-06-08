@@ -138,17 +138,17 @@
     <Compile Include="Pages\ContentPlaceHolder.xaml.cs">
       <DependentUpon>ContentPlaceHolder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\pageScanStore.xaml.cs">
-      <DependentUpon>pageScanStore.xaml</DependentUpon>
+    <Compile Include="Pages\singleStore.xaml.cs">
+      <DependentUpon>singleStore.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\pageScanTake.xaml.cs">
-      <DependentUpon>pageScanTake.xaml</DependentUpon>
+    <Compile Include="Pages\packageTake.xaml.cs">
+      <DependentUpon>packageTake.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\pageCodeTake.xaml.cs">
-      <DependentUpon>pageCodeTake.xaml</DependentUpon>
+    <Compile Include="Pages\packageStore.xaml.cs">
+      <DependentUpon>packageStore.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\pageManualTake.xaml.cs">
-      <DependentUpon>pageManualTake.xaml</DependentUpon>
+    <Compile Include="Pages\singleTake.xaml.cs">
+      <DependentUpon>singleTake.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
@@ -287,19 +287,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\pageScanStore.xaml">
+    <Page Include="Pages\singleStore.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\pageScanTake.xaml">
+    <Page Include="Pages\packageTake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\pageCodeTake.xaml">
+    <Page Include="Pages\packageStore.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\pageManualTake.xaml">
+    <Page Include="Pages\singleTake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
